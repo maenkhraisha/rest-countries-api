@@ -1,10 +1,8 @@
-import './App.css';
+import HomePage from "./Pages/HomePage";
 
 function App() {
   return (
-    <div className="App">
-      <h1>rest API</h1>
-    </div>
+    <HomePage />
   );
 }
 
