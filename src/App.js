@@ -4,6 +4,8 @@ import Header from './Components/Header';
 import MainSection from './Components/MainSection';
 import Filter from './Components/Filter';
 
+import './index.css';
+
 const APIService = async () => {
   const response = await fetch('https://restcountries.com/v3.1/all');
   const data = await response.json();
@@ -11,7 +13,7 @@ const APIService = async () => {
   data.map((c) => {
     newObj.push({
       Id: c.ccn3,
-      Name: c.name.official,
+      Name: c.name.common,
       Population: c.population,
       Region: c.region,
       Capital: c.capital,
@@ -24,6 +26,7 @@ const APIService = async () => {
 function App() {
   const [countries, setCountries] = useState([]);
   const [countryFilter, setCountryFilter] = useState('');
+  const [lightTheme, setLightTheme] = useState(true);
 
   useEffect(() => {
     APIService().then((res) => {
@@ -40,46 +43,19 @@ function App() {
 
   const filterCoutry = (country) => {
     setCountryFilter(country);
-  }
+  };
+
+  const toggoleTheme = () => {
+    setLightTheme(!lightTheme);
+  };
 
   return (
-    <>
-      <Header />
-      <Filter filterContinent={filterContinent} filterCoutry={filterCoutry}/>
+    <div>
+      <Header theme={lightTheme} themeChange={toggoleTheme} />
+      <Filter filterContinent={filterContinent} filterCoutry={filterCoutry} />
       <MainSection countries={countries} countryFilter={countryFilter} />
-    </>
+    </div>
   );
 }
 
 export default App;
-
-// import React, { useState } from 'react';
-// import './App.css';
- 
-// function App() {
- 
-//   const fruit = ['apple', 'banana', 'orange', 'grapefruit',
-//     'mango', 'strawberry', 'peach', 'apricot'];
- 
-//   const [filter, setFilter] = useState('');
- 
-//   return (
-//     <div className="App">
-//       <p>
-//         Type to filter the list:
-//         <input id="filter"
-//           name="filter"
-//           type="text"
-//           value={filter}
-//           onChange={event => setFilter(event.target.value)}
-//         />
-//       </p>
-//       <ul>
-//       {fruit.filter(f => f.includes(filter) || filter === '')
-//             .map(f => <li key={f}>{f}</li>)}
-//       </ul>
-//     </div>
-//   );
-// }
- 
-// export default App;
