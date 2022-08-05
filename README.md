@@ -22,7 +22,7 @@
 ## Live Demo 
 
 Go to live demo : 
-- https://covid-watcher-maen.herokuapp.com/
+- https://zesty-starship-a6b03b.netlify.app/
 
 
 
