@@ -59,7 +59,7 @@ function App() {
 
   return (
     <CountriesContext.Provider value={countries}>
-      <div>
+      <div className="overflow-hidden">
         <Router>
           <Header theme={lightTheme} themeChange={toggoleTheme} />
           <Routes>
