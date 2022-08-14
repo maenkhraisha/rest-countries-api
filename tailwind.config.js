@@ -6,6 +6,11 @@ module.exports = {
   ],
   darkMode : 'class',
   theme: {
+    colors:{
+      'darkBg': '#202c37',
+      'darkLigth' : '#2b3945',
+      'white' : '#fff',
+    },
     extend: {
       gridTemplateColumns: {
         'auto-fit': 'repeat(auto-fit, minmax(250px, 1fr))',        

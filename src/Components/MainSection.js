@@ -7,7 +7,7 @@ const MainSection = ({ countries, countryFilter,filterContinent ,filterCoutry}) 
       <Filter filterContinent={filterContinent} filterCoutry={filterCoutry} />
       <div
         className="bg-zinc-100 px-16 grid 
-      grid-cols-auto-fit gap-5"
+      grid-cols-auto-fit gap-5 "
       >
         {countries
           .filter((f) => f.Name.toLowerCase().includes(countryFilter))

@@ -3,7 +3,7 @@ import { BsMoonFill, BsMoon } from 'react-icons/bs';
 
 const Header = ({ theme, themeChange }) => {
   return (
-    <div className="flex px-16 py-4 border-b-4 ">
+    <div className="flex px-16 py-4 shadow-lg dark:bg-darkLigth dark:text-white">
       <h1 className="font-bold font-Nunito flex-1">Where in the world?</h1>
       <div className="flex">
         {theme ? (

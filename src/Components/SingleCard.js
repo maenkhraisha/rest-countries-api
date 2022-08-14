@@ -14,7 +14,7 @@ const SingleCard = () => {
   let languagies = Object.values(country.Languages);
 
   return (
-    <div className="m-3 md:m-10 md:p-5 font-Nunito">
+    <div className="m-3 md:m-10 md:p-5 font-Nunito dark:text-white">
       <Link to="/">
         <button className="border border-gray-400 shadow-inner px-7 py-2 mb-16">
           Back

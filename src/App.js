@@ -51,15 +51,18 @@ function App() {
 
   const filterCoutry = (country) => {
     setCountryFilter(country);
+    
   };
 
   const toggoleTheme = () => {
     setLightTheme(!lightTheme);
+    if(lightTheme) document.documentElement.classList.add('dark');
+    else document.documentElement.classList.remove('dark');
   };
 
   return (
     <CountriesContext.Provider value={countries}>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden dark:bg-darkBg">
         <Router>
           <Header theme={lightTheme} themeChange={toggoleTheme} />
           <Routes>

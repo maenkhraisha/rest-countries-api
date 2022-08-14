@@ -4,7 +4,7 @@ const CountryCard = ({ country }) => {
    
   return (
     <Link to="/singleCard" className="links" state={{ countryID: country.Id}}>
-    <div className="bg-white flex flex-col cursor-pointer "  key={country.Id}>
+    <div className="bg-white flex flex-col cursor-pointer dark:bg-darkLigth dark:text-white"  key={country.Id}>
       <img
         className="block w-full flex-1"
         src={country.Flags}
