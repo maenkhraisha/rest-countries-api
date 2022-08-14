@@ -1,6 +1,10 @@
+import { Link } from 'react-router-dom';
+
 const CountryCard = ({ country }) => {
+   
   return (
-    <div className="bg-white flex flex-col" key={country.Id}>
+    <Link to="/singleCard" className="links" state={{ countryID: country.Id}}>
+    <div className="bg-white flex flex-col cursor-pointer "  key={country.Id}>
       <img
         className="block w-full flex-1"
         src={country.Flags}
@@ -23,6 +27,8 @@ const CountryCard = ({ country }) => {
         </div>
       </div>
     </div>
+  </Link>
+    
   );
 };
 

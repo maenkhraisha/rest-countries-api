@@ -4,7 +4,7 @@ import { BsMoonFill, BsMoon } from 'react-icons/bs';
 const Header = ({ theme, themeChange }) => {
   return (
     <div className="flex px-16 py-4 border-b-4 ">
-      <h1 className="font-bold font-Nunito flex-1 ">Where in the world?</h1>
+      <h1 className="font-bold font-Nunito flex-1">Where in the world?</h1>
       <div className="flex">
         {theme ? (
           <>
@@ -21,10 +21,14 @@ const Header = ({ theme, themeChange }) => {
               onClick={themeChange}
               size={20}
               fill={'white'}
-            />            
+            />
           </>
         )}
-        {<p className="pl-3 font-bold text-sm font-Nunito text-gray-500 ">{theme?'Dark Mode' : 'Light Mode'}</p>}
+        {
+          <p className="pl-3 font-bold text-sm font-Nunito text-gray-500 ">
+            {theme ? 'Dark Mode' : 'Light Mode'}
+          </p>
+        }
       </div>
     </div>
   );
